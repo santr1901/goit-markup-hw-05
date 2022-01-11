@@ -7,6 +7,7 @@
 --bkground-color-one: #2F303A;
 --bkground-color-two: #F5F4FA;
 --header-line-color: #ECECEC;
+--work-name-bg:  rgba(47, 48, 58, 0.8);
 --icons-color: #AFB1B8;
 --footer-icon-bg: rgba(255, 255, 255, 0.1);
 --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -103,7 +104,18 @@ display: flex;
 .header-list {
   color: var(--first-color);
   display: flex;
-  
+}
+
+.current::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
 }
 
 .header-link{
@@ -115,6 +127,7 @@ padding-bottom: 32px;
 display: block;
 display: flex;
 align-items: center;
+position: relative;
 }
 
 .header-icon {
@@ -245,7 +258,28 @@ margin-bottom: 50px;
   flex-basis: calc(100%/3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+  position: relative;
 }
+
+.work-name {
+  background-color: var(--work-name-bg);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: 224px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.work-name-txt {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--third-color);
+}
+
+
 
 .team {
   background-color: var(--bkground-color-two);
