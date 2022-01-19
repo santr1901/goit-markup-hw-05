@@ -377,7 +377,7 @@
 
     </address>
   </div>
-  
+
     <div class="footer-list footer-wrap-item">
     <h3 class="footer-txt">Присоединяйтесь</h3>
     <ul class="list social-list">
@@ -417,7 +417,7 @@
   </div>
   </div>
     </footer>
-    <div class="backdropp is-hidden" data-modal>
+    <div class="backdropp " data-modal>
       <div class="modal">
         
           <button type="button" class="modal-close" data-modal-close>
@@ -425,6 +425,47 @@
               <use href="images/icons.svg#icon-close-modal"></use>
             </svg>
           </button>
+
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+          <form action="#">
+            <label class="input-txt" for="user-name">Имя</label>
+            <input type="text" 
+            class="form-input" 
+            name="user-name" 
+            placeholder="Введите имя" 
+            minlength="3"
+            id="user-name"
+
+            required/>
+            
+
+            <label class="input-txt" for="user-tel">Телефон</label>
+            <input type="tel" 
+            class="form-input" 
+            name="user-tel" 
+            placeholder="Введите телефон" 
+            id="user-tel"
+
+            required/>
+            
+
+            <label class="input-txt" for="user-email">Почта</label>
+            <input type="email" 
+            class="form-input" 
+            name="user-email" 
+            placeholder="Введите почту" 
+            id="user-email"
+            />
+
+            <label class="input-txt" for="user-text">Комментарий</label>
+            <textarea class="text-area" placeholder="Введите текст"></textarea>
+            
+
+            <button type="submit">Отправить</button>
+            
+          </form>
+
         </div>
     </div>
     <script src="./js/modal.js"></script>
