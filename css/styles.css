@@ -190,6 +190,8 @@ max-width: 696px;
 }
 
 .service-btn {
+  min-width: 200px;
+  max-height: 50px;
 font-family: inherit; 
 font-weight: 700;
 font-size: 16px;
@@ -446,7 +448,8 @@ transition: border-color var(--transition-time) var(--transition-function) , col
 
 .footer-txt {
 font-size: 14px;
-line-height: 16px;
+line-height: 1.14;
+font-weight: bold;
 text-transform: uppercase;
 color: var(--third-color);
 margin-bottom: 20px;
@@ -457,6 +460,49 @@ background-color: var(--footer-icon-bg);
 color: var(--third-color);
 transition: background-color var(--transition-time) var(--transition-function) , color var(--transition-time) var(--transition-function) ;
 }
+
+.footer-follow {
+  display: flex;
+  align-items: end;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-right: 12px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none ;
+  padding-left: 12px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+}
+
+.footer-btn-txt {
+  margin-right: 10px;
+}
+
+
 
 /*--------------------Portfolio------------------------------*/
 .portfolio-title {
@@ -635,6 +681,7 @@ line-height: 1.87;
   cursor: pointer;
 }
 
+
 .modal-title {
 font-weight: bold;
 font-size: 20px;
@@ -644,7 +691,8 @@ color: var(--first-color);
 margin-bottom: 12px;
 }
 
-.form-input {
+.form-input,
+.text-area  {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -653,6 +701,7 @@ margin-bottom: 12px;
   padding-left: 10px;
 }
 
+
 .input-txt {
 font-size: 12px;
 line-height: 1.16;
@@ -660,11 +709,37 @@ letter-spacing: 0.01em;
 color: var(--second-color);
 }
 
-.text-area {
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+.form-input::placeholder,
+.text-area::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);;
 }
+
+.form-input:focus,
+.form-input:hover,
+.text-area:focus,
+.text-area:hover,
+.form-input:focus::placeholder,
+.form-input:hover::placeholder,
+.text-area:focus::placeholder,
+.text-area:hover::placeholder
+ {
+  border-color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
+
+.text-area {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.modal-btn {
+  margin-top: 30px;
+}
+
+
 
 /* -----------------------------MODAL END------------------------ */
